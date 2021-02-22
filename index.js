@@ -18,9 +18,10 @@ app.use((req, res) => {
 	res.send('🚀 Hello there !');
 });
 
-const options = {
+/*const options = {
       key: fs.readFileSync('/var/www/html/selfsigned.key'),
       cert: fs.readFileSync('/var/www/html/selfsigned.crt')};
+*/
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(ssl, app);
