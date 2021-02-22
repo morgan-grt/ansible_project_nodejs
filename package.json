@@ -9,7 +9,7 @@
     "express": "latest"
   },
   "scripts": {
-    "pm2r": "pm2 start index.js --name app",
+    "pm2r": "pm2 start index.js --name app -f",
     "pm2s": "pm2 stop app"
   }
 }
