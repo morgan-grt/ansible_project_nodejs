@@ -7,5 +7,9 @@
   "dependencies": {
     "pm2": "latest",
     "express": "latest"
+  },
+  "scripts": {
+    "pm2r": "pm2 start index.js --name app",
+    "pm2s": "pm2 stop app"
   }
 }
