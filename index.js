@@ -8,7 +8,7 @@ const hostname = '0.0.0.0';
 const port_https = 443;
 const port_http = 80;
 
-ssl = openssl('openssl req -config csr.cnf -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.key -out certificate.crt');
+ssl = openssl('openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -batch');
 
 const app = express();
 
