@@ -29,7 +29,3 @@ httpServer.listen(port_http, hostname, () => {
 httpsServer.listen(port_https, hostname, () => {
 	console.log('HTTPS Server running on port 443');
 });
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
