@@ -6,7 +6,9 @@
   "license": "MIT",
   "dependencies": {
     "pm2": "latest",
-    "express": "latest"
+    "express": "latest",
+    "greenlock": "latest",
+    "greenlock-express": "latest"
   },
   "scripts": {
     "pm2r": "pm2 start index.js --name app -f",
