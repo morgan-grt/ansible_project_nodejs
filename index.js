@@ -17,8 +17,8 @@ app.use((req, res) => {
 
 const options = {
       key: fs.readFileSync('/var/www/html/certs/key.pem'),
-      cert: fs.readFileSync('/var/www/html/certs/cert.pem')},
-      passphrase: 'blop';
+      cert: fs.readFileSync('/var/www/html/certs/cert.pem'),
+      passphrase: 'blop'};
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(options, app);
