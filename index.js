@@ -1,11 +1,14 @@
 const https = require('https');
 const http = require('http');
 const fs = require('fs');
+const openssl = require('openssl-nodejs')
 const express = require('express');
 
 const hostname = '0.0.0.0';
 const port_https = 443;
 const port_http = 80;
+
+ssl = openssl('openssl req -config csr.cnf -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.key -out certificate.crt');
 
 const app = express();
 
@@ -20,7 +23,7 @@ const options = {
       cert: fs.readFileSync('/var/www/html/selfsigned.crt')};
 
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(options, app);
+const httpsServer = https.createServer(ssl, app);
 
 httpServer.listen(port_http, hostname, () => {
 	console.log('🚀 HTTP Server running on port 80');
