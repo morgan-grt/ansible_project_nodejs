@@ -16,8 +16,8 @@ app.use((req, res) => {
 });
 
 const options = {
-      key: fs.readFileSync('/var/www/html/certs/selfsigned.key'),
-      cert: fs.readFileSync('/var/www/html/certs/selfsigned.crt')};
+      key: fs.readFileSync('/var/www/html/certs/key.pem'),
+      cert: fs.readFileSync('/var/www/html/certs/cert.pem')};
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(options, app);
