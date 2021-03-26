@@ -2,7 +2,7 @@ const express = require('express');
 const fetch = require("node-fetch");
 const app = express();
 const path = require("path");
-const port = 8080;
+const port = 80;
 const hostname = "0.0.0.0";
 
 // Static Files
