@@ -1,21 +1,25 @@
-const http = require('http');
-const fs = require('fs');
 const express = require('express');
-
-const hostname = '0.0.0.0';
-const port_http = 80;
-
+const fetch = require("node-fetch");
 const app = express();
+const path = require("path");
+const port = 8080;
+const hostname = "0.0.0.0";
 
-app.use((req, res) => {
-	res.statusCode = 200;
-  	res.setHeader('Content-Type', 'text/plain');
-	res.send('🚀 Bonjour projet annuel !');
+// Static Files
+app.use(express.static('ui'));
+// Specific folder example
+app.use('/css', express.static(path.join(__dirname, 'ui/css')));
+app.use('/js', express.static(path.join(__dirname, 'ui/js')));
+app.use('/img', express.static(path.join(__dirname, 'ui/img')));
+
+// Set View's
+app.set('views', path.join(__dirname, "ui"));
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+// Navigation
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
-const httpServer = http.createServer(app);
-
-httpServer.listen(port_http, hostname, () => {
-	console.log('🚀 HTTP Server running on port 80');
-});
-
+app.listen(port, hostname, () => console.info(`🚀 App listening on port ${port}`));
