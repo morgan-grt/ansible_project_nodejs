@@ -13,9 +13,10 @@
     "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "pm2r": "pm2 start index.js --name app -f",
-    "pm2s": "pm2 stop app",
-    "pm2u": "pm2 restart app",
+    "pm2r": "pm2 start index.js -f",
+    "pm2s": "pm2 stop index.js",
+    "pm2u": "pm2 restart index.js",
+    "pm2del": "pm2 delete index.js",
     "pm2status": "pm2 status"
   }
 }
