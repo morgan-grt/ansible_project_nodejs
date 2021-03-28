@@ -16,7 +16,7 @@
     "pm2r": "pm2 start index.js -f",
     "pm2s": "pm2 stop index.js",
     "pm2u": "pm2 restart index.js",
-    "pm2del": "pm2 delete index.js 2> /dev/null",
+    "pm2del": "pm2 delete index.js",
     "pm2status": "pm2 status"
   }
 }
