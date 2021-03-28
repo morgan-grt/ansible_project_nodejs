@@ -15,6 +15,7 @@
   "scripts": {
     "pm2r": "pm2 start index.js --name app -f",
     "pm2s": "pm2 stop app",
+    "pm2u": "pm2 restart app",
     "pm2status": "pm2 status"
   }
 }
