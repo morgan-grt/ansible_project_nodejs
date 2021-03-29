@@ -1,0 +1,49 @@
+<html><head><style>body {
+   color: white;
+   background-color: #27282E;
+
+}
+
+a {
+   color: #df691a;
+}
+}
+</style></head><body><p>GUERET Morgan<br>CARDOSO Simon  </p>
+<hr>
+<h1 id="projet-annuel-serveur-nodejs-">Projet annuel serveur <em>nodejs</em></h1>
+<p>Ce projet consiste en la mise en place d&#39;un ensemble de serveurs web exécutant <em>nodejs</em> pouvant recevoir des<br>tâches à l&#39;aide de <em>Ansible</em>.<br>Le projet permet de présenter l&#39;automatisation de tâches en direction d&#39;un ensemble de machines (serveurs)<br>Les fichiers et dossiers disponibles sont utilisés pour faire tourner un site avec <em>nodejs</em> à distance.  </p>
+<h2 id="organisation-">Organisation :</h2>
+<p>Le dossier comporte:</p>
+<ul>
+<li><em>ui/</em> : contient les fichiers de style pour le site web ainsi que la page principale  </li>
+<li><em>index.js</em> : le code pour exécuter le serveur <em>nodejs</em> sous <em>express</em>  </li>
+<li><p><em>package.json</em> : contient les dépendances à installer pour le serveur <em>nodejs</em><br>ainsi que la déclaration des scripts utilisés par <em>ansible</em></p>
+</li>
+<li><p><em>update.py</em> : le code pour modifier la page principale  </p>
+</li>
+</ul>
+<h2 id="lancement-">Lancement :</h2>
+<p>Ce serveur <em>nodejs</em> n&#39;est pas censé être utilisé directement, il est utilisé par *ansible.<br>Cependant vous pouvez néanmoins l&#39;utiliser comme ceci :</p>
+<ul>
+<li><p>pour le démarrer</p>
+<pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> pm2r</span>
+</code></pre>
+</li>
+<li><p>pour le stopper</p>
+<pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> pm2s</span>
+</code></pre>
+</li>
+<li><p>pour le redémarrer</p>
+<pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> pm2u</span>
+</code></pre>
+</li>
+<li><p>pour afficher les status</p>
+<pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> pm2status</span>
+</code></pre>
+</li>
+<li><p>pour supprimer les processus <em>nodejs</em></p>
+<pre><code class="lang-bash">npm <span class="hljs-keyword">run</span><span class="bash"> pm2del</span>
+</code></pre>
+</li>
+</ul>
+</body></html>
